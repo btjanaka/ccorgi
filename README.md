@@ -3,11 +3,15 @@
 
 ## Overview
 
+![](docs/sample.png)
+
 ccorgi is a simple program that causes cute corgis to scroll across your
 terminal screen!
 
 
 ## Setup
+
+Note: Currently, this program **only works on Linux**.
 
 Simply clone this repo to your home directory:
 ```shell
