@@ -13,9 +13,13 @@ Simply clone this repo to your home directory:
 ```shell
 git clone https://github.com/btjanaka/ccorgi ~/ccorgi
 ```
-And add the following line to your bashrc:
+Add the following line to your bashrc:
 ```shell
 alias ccorgi=~/ccorgi/build/ccorgi
+```
+And reload bash with:
+```shell
+exec bash
 ```
 
 
