@@ -38,6 +38,7 @@ void parse_flags(int argc, char* argv[]) {
     if (strcmp(argv[i], "-n") == 0) {
       if (i < argc - 1) {
         FLAG_corgi_count = atoi(argv[++i]);
+        FLAG_corgi_count = FLAG_corgi_count < 1 ? 1 : FLAG_corgi_count;
       }
     }
   }
