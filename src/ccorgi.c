@@ -30,6 +30,7 @@ char CORGI_2[CORGI_HEIGHT][CORGI_WIDTH] = {
     " \\\\----// |",
 };
 
+
 // Parses out flags from the command line.
 // Currently parse:
 // * -n [INTEGER]
@@ -43,6 +44,23 @@ void parse_flags(int argc, char* argv[]) {
     }
   }
 }
+
+
+// Runs initializations for ncurses
+void init_ncurses() {
+  initscr();
+  noecho();
+  curs_set(FALSE);
+}
+
+
+// Prints the ground on which the corgis "walk".
+void print_ground(int length) {
+  for (int x = 0; x < length; ++x) {
+    mvprintw(CORGI_HEIGHT - 1, x, "|");
+  }
+}
+
 
 // Prints a corgi on the screen.
 //
@@ -68,19 +86,6 @@ void print_corgi(char corgi[CORGI_HEIGHT][CORGI_WIDTH], int width, char filler,
   }
 }
 
-// Runs initializations for ncurses
-void init_ncurses() {
-  initscr();
-  noecho();
-  curs_set(FALSE);
-}
-
-// Prints the ground on which the corgis "walk".
-void print_ground(int length) {
-  for (int x = 0; x < length; ++x) {
-    mvprintw(CORGI_HEIGHT - 1, x, "|");
-  }
-}
 
 int main(int argc, char* argv[]) {
   int max_x;
