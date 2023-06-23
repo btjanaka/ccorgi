@@ -11,7 +11,7 @@ terminal screen!
 
 ## Setup
 
-Note: Currently, this program **only works on Linux**.
+Note: Currently, this program **only works on Linux**. You will also need to have libncurses5 installed.
 
 Simply clone this repo to your home directory:
 ```shell
